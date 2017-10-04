@@ -1,0 +1,12 @@
+version: '3'
+services:
+  elasticsearch2:
+    image: elasticsearch:${ELASTICSEARCH_VERSION}
+    environment:
+      - ES_NODE_NAME=es2
+    volumes:
+      - /usr/share/elasticsearch/data:/usr/share/elasticsearch/data
+      - ./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    ports:
+      - 9202:9200
+      - 9302:9300
