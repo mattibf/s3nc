@@ -5,7 +5,6 @@ services:
     environment:
       - ES_NODE_NAME=es2
     volumes:
-      - /usr/share/elasticsearch/data:/usr/share/elasticsearch/data
       - ./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
     ports:
       - 9202:9200
